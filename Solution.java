@@ -14,9 +14,9 @@ class Solution {
                 case 'M': value = 1000; break;
             }
             if (i < s.length()-1) {
-                if (s.charAt(i) == 'I' && (s.charAt(i + 1) == 'X' || s.charAt(i + 1) == 'V')) value -= 2;
-                if (s.charAt(i) == 'X' && (s.charAt(i + 1) == 'L' || s.charAt(i + 1) == 'C')) value -= 20;
-                if (s.charAt(i) == 'C' && (s.charAt(i + 1) == 'D' || s.charAt(i + 1) == 'M')) value -= 200;
+               if (s.charAt(i) == 'I' && (s.charAt(i + 1) == 'X' || s.charAt(i + 1) == 'V')) value -= 2*value;
+                if (s.charAt(i) == 'X' && (s.charAt(i + 1) == 'L' || s.charAt(i + 1) == 'C')) value -= 2*value;
+                if (s.charAt(i) == 'C' && (s.charAt(i + 1) == 'D' || s.charAt(i + 1) == 'M')) value -= 2*value;
             }
             result += value;
 
